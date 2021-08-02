@@ -8,6 +8,6 @@ Minimal, unopinionated static site generator powered by webpack.
 - open contributor 
 
 ### Author 
-Dimas Prasetyo 
+Dimas Prasetyo & Arie Aditya Nugraha 
 
 Inspired By https://www.ivarprudnikov.com/static-website-multiple-html-pages-using-webpack-plus-github-example/
