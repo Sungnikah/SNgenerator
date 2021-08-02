@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
@@ -8,6 +7,8 @@ const path = require('path');
 const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
+  // https://webpack.js.org/configuration/mode/
+  mode: 'development',
   // This option controls if and how source maps are generated.
   // see at: https://webpack.js.org/configuration/devtool/
   devtool: 'source-map',
@@ -15,12 +16,12 @@ module.exports = {
 	entry: {
 		index: './src/js/index.js',
     about: './src/js/about.js', 
-    contacts: './src/js/contacts.js'
+    contact: './src/js/contact.js'
 	},
   // how to write the compiled files to disk
   // see at: https://webpack.js.org/concepts/output/
   output: {
-    filename: '[name].[hash:20].js',
+    filename: '[name].[hash:5].js',
     path: buildPath
   },
 	// see at: https://webpack.js.org/configuration/dev-server/
@@ -60,6 +61,21 @@ module.exports = {
         test: /\.css$/,
         use: [
           "style-loader",
+          "css-loader"
+        ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env']
+        }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          MiniCssExtractPlugin.loader,
           "css-loader"
         ]
       }
