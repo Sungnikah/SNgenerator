@@ -1,4 +1,4 @@
-- [![webpack](./src/assets/svg/badges/webpack.svg)](https://badges.aleen42.com/src/webpack.svg) Webpack
+[![webpack](./src/assets/svg/badges/webpack.svg)](https://badges.aleen42.com/src/webpack.svg) 
 
 ## SN Generator App For Static Site
 
