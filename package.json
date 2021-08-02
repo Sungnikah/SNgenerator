@@ -1,0 +1,20 @@
+{
+  "name": "sngenerator-site",
+  "version": "1.0.0",
+  "description": "generator static site bundle with webpack multiple pages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "static-generator"
+  ],
+  "author": "Dimas Prasetyo & Arie Aditya Nugraha",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.2",
+    "webpack": "^5.47.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
