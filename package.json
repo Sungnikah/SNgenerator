@@ -4,6 +4,9 @@
   "description": "generator static site bundle with webpack multiple pages",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js --mode development",
+    "build": "webpack --config webpack.prod.js --mode production",
+    "preview": "npm run build && http-server dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -12,9 +15,19 @@
   "author": "Dimas Prasetyo & Arie Aditya Nugraha",
   "license": "ISC",
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "css-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
+    "http-server": "^0.12.3",
+    "mini-css-extract-plugin": "^2.1.0",
+    "optimize-css-assets-webpack-plugin": "^6.0.1",
+    "style-loader": "^3.2.1",
+    "terser-webpack-plugin": "^5.1.4",
     "webpack": "^5.47.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
   }
 }
